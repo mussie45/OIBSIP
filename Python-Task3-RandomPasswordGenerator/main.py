@@ -8,9 +8,8 @@ def welcome_message():
 
 
 def validate_include(input):
-    x = []
     lis = input.split()
-    if len(lis) == 0:
+    if len(lis) <= 2:
         return False
     if len(lis) > 4:
         return False
