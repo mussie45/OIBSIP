@@ -46,12 +46,12 @@ def ziplookup():
             weather_color = "#7E0023"
 
         root.configure(bg=weather_color)
-        myLabel = None
 
         myLabel = Label(
             root,
             text=city + " Air Quality " + str(quality) + " " + category,
             font=("Helvetica", 20, "bold"),
+            bg=weather_color,
             fg="black",
             pady=20
         )
@@ -60,6 +60,7 @@ def ziplookup():
 
     except Exception as e:
         api = "Error..."
+    zip.delete(0, END)
 
 
 zip = Entry(
